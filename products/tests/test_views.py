@@ -7,8 +7,9 @@ from django.test import TestCase
 import pytest
 
 
-@pytest.fixture
+@pytest.fixture(scope='module')
 def factory():
+    print('FACTORY INSTANTIE')
     return RequestFactory()
 
 
